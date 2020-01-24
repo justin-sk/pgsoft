@@ -1,0 +1,25 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  profiles:
+    active: dev,dev-sql-database,swagger
+  application:
+    name: pgsoft
+  data:
+    rest:
+      detection-strategy: annotated
+  jpa:
+    properties:
+      jadira:
+        usertype:
+          autoRegisterUserTypes: true
+      org:
+        hibernate:
+          envers:
+            track_entities_changed_in_revision: true
+            store_data_at_delete: true
+    hibernate:
+      ddl-auto: none
+
+  jackson:
+    default-property-inclusion: non_empty

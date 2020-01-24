@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: dev-sql-database
+  datasource:
+    url: jdbc:sqlserver://70.32.28.3;database=pgsoft_dev
+    username: be_praveen
+    password: wSku69*7
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    show-sql: true
